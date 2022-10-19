@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StraightenWheelView">
+        <attr name="sw_marksCount" format="integer" />
+        <attr name="sw_normalColor" format="color" />
+        <attr name="sw_activeColor" format="color" />
+        <attr name="sw_endLock" format="boolean" />
+        <attr name="sw_snapToMarks" format="boolean" />
+        <attr name="sw_showActiveRange" format="boolean" />
+        <attr name="sw_onlyPositiveValues" format="boolean" />
+    </declare-styleable>
+</resources>
