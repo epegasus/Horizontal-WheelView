@@ -225,7 +225,7 @@ internal class Wheel(private val view: StraightenWheelView) {
         private const val DP_NORMAL_MARK_WIDTH = 1
         private const val DP_ZERO_MARK_WIDTH = 2
         private const val DP_CURSOR_WIDTH = 3
-        private const val NORMAL_MARK_RELATIVE_HEIGHT = 0.6f
+        private const val NORMAL_MARK_RELATIVE_HEIGHT = 0.6f        // All black lines
         private const val ZERO_MARK_RELATIVE_HEIGHT = 0.8f
         private const val CURSOR_RELATIVE_HEIGHT = 1f
         private const val SHADE_RANGE = 0.7f
