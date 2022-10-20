@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.swvWheelMain.totalSpinnerRotation = 22.5f
         binding.swvWheelMain.setListener(object : StraightenWheelView.Listener() {
             override fun onRotationChanged(radians: Double) {
                 updateUi()

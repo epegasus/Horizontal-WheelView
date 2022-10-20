@@ -82,17 +82,25 @@ class StraightenWheelView(context: Context?, attrs: AttributeSet) : View(context
                 listener!!.onRotationChanged(angle)
             }
         }
+
     var degreesAngle: Double
-        get() = radiansAngle * 180 / Math.PI
+        get() = radiansAngle * TOTAL_SPINNER_ROTATION / Math.PI
         set(degrees) {
-            val radians = degrees * Math.PI / 180
+            val radians = degrees * Math.PI / TOTAL_SPINNER_ROTATION
             radiansAngle = radians
         }
+
     var completeTurnFraction: Double
         get() = radiansAngle / (2 * Math.PI)
         set(fraction) {
             val radians = fraction * 2 * Math.PI
             radiansAngle = radians
+        }
+
+    var totalSpinnerRotation: Float
+        get() = TOTAL_SPINNER_ROTATION
+        set(value) {
+            TOTAL_SPINNER_ROTATION = value
         }
 
     fun setOnlyPositiveValues(onlyPositiveValues: Boolean) {
@@ -167,13 +175,14 @@ class StraightenWheelView(context: Context?, attrs: AttributeSet) : View(context
     companion object {
         private const val DP_DEFAULT_WIDTH = 200
         private const val DP_DEFAULT_HEIGHT = 32
-        private const val DEFAULT_MARKS_COUNT = 40
+        private const val DEFAULT_MARKS_COUNT = 90                              // total number of black lines (default: 40)
         private const val DEFAULT_NORMAL_COLOR = -0x1
         private const val DEFAULT_ACTIVE_COLOR = -0xab5310
-        private const val DEFAULT_SHOW_ACTIVE_RANGE = true
+        private const val DEFAULT_SHOW_ACTIVE_RANGE = false
         private const val DEFAULT_SNAP_TO_MARKS = false
-        private const val DEFAULT_END_LOCK = false
+        private const val DEFAULT_END_LOCK = true                              // do not restart circling if true
         private const val DEFAULT_ONLY_POSITIVE_VALUES = false
+        private var TOTAL_SPINNER_ROTATION = 180f
         const val SCROLL_STATE_IDLE = 0
         const val SCROLL_STATE_DRAGGING = 1
         const val SCROLL_STATE_SETTLING = 2

@@ -182,7 +182,9 @@ internal class Wheel(private val view: StraightenWheelView) {
                 colorPointer++
             }
             if (i != zeroIndex) {
-                drawNormalMark(canvas, x, scales[i], shades[i], color)
+                //drawNormalMark(canvas, x, scales[i], shades[i], color)
+                // Updated by Sohaib
+                drawNormalMark(canvas, x, scales[i], shades[0], color)
             } else {
                 drawZeroMark(canvas, x, scales[i], shades[i])
             }
@@ -224,11 +226,11 @@ internal class Wheel(private val view: StraightenWheelView) {
         private const val DP_CURSOR_CORNERS_RADIUS = 1
         private const val DP_NORMAL_MARK_WIDTH = 1
         private const val DP_ZERO_MARK_WIDTH = 2
-        private const val DP_CURSOR_WIDTH = 3
-        private const val NORMAL_MARK_RELATIVE_HEIGHT = 0.6f        // All black lines
+        private const val DP_CURSOR_WIDTH = 3                       // Center fixed cursor width
+        private const val NORMAL_MARK_RELATIVE_HEIGHT = 0.6f        // Other black lines
         private const val ZERO_MARK_RELATIVE_HEIGHT = 0.8f
-        private const val CURSOR_RELATIVE_HEIGHT = 1f
-        private const val SHADE_RANGE = 0.7f
-        private const val SCALE_RANGE = 0.1f
+        private const val CURSOR_RELATIVE_HEIGHT = 1f               // Center fixed cursor
+        private const val SHADE_RANGE = 1.0f                        // (default = 0.7)
+        private const val SCALE_RANGE = 0.3f                        // Other black lines height (default = 0.1)
     }
 }
