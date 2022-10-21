@@ -166,7 +166,7 @@ class StraightenWheelView(context: Context?, attrs: AttributeSet) : View(context
     companion object {
         private const val DP_DEFAULT_WIDTH = 200
         private const val DP_DEFAULT_HEIGHT = 32
-        private const val DEFAULT_MARKS_COUNT = 40
+        private const val DEFAULT_MARKS_COUNT = 22.5
         private const val DEFAULT_NORMAL_COLOR = -0x1
         private const val DEFAULT_ACTIVE_COLOR = -0xab5310
         private const val DEFAULT_SHOW_ACTIVE_RANGE = true

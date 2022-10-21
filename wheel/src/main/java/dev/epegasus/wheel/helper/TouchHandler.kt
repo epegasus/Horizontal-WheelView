@@ -101,7 +101,7 @@ internal class TouchHandler(private val view: StraightenWheelView) : SimpleOnGes
     }
 
     companion object {
-        private const val SCROLL_ANGLE_MULTIPLIER = 0.006f
+        private const val SCROLL_ANGLE_MULTIPLIER = 0.008f
         private const val FLING_ANGLE_MULTIPLIER = 0.0002f
         private const val SETTLING_DURATION_MULTIPLIER = 1000
         private val INTERPOLATOR: Interpolator = DecelerateInterpolator(2.5f)
