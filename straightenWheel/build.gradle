@@ -1,16 +1,15 @@
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdkVersion 33
+    namespace 'com.github.shchurov.horizontalwheelview'
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 33
+        minSdkVersion 24
+        targetSdkVersion 36
     }
-    namespace 'com.github.shchurov.horizontalwheelview'
 }
 
 dependencies {

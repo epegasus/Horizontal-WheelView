@@ -13,6 +13,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
+
 rootProject.name = "Horizontal WheelView"
 include ':app'
 include ':wheel'
